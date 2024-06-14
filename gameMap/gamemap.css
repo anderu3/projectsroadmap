@@ -1,0 +1,27 @@
+#gameMap {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+#sprite {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    height: 50px;
+    width: 50px;
+    background: red;
+}
+.room {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border: 4px solid orange;
+}
+
+#room1 { top: 10%; left: 20%; }
+#room2 { top: 40%; left: 20%; }
+#room3 { top: 70%; left: 20%; }
+#room4 { top: 10%; left: 80%; }
+#room5 { top: 40%; left: 80%; }
+#stairs { top: 70%; left: 80%; }

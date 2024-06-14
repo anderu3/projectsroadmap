@@ -1,40 +1,52 @@
-const sprite = document.getElementById('sprite');
-let spriteTop = sprite.offsetTop;
-let spriteLeft = sprite.offsetLeft;
+document.addEventListener('DOMContentLoaded', () => {
+    const sprite = document.getElementById('sprite');
+    const ladder = document.querySelector('.ladder');
+    const stepSize = 5;
+    // const bookShelfRows = [20, 40, 60, 80];
 
-window.addEventListener('keydown', function(e) {
-    switch (e.key) {
-        case 'ArrowUp':
-            spriteTop -= 10;
-            break;
-        case 'ArrowDown':
-            spriteTop += 10;
-            break;
-        case 'ArrowLeft':
-            spriteLeft -= 10;
-            break;
-        case 'ArrowRight':
-            spriteLeft += 10;
-            break;
-    }
+    let spritePosition = {
+        x: 10,
+        y: 90,
+    };
+    sprite.style.left = `${spritePosition.x}vw`;
+    sprite.style.top = `${spritePosition.y}vh`;
 
-    sprite.style.top = spriteTop + 'px';
-    sprite.style.left = spriteLeft + 'px';
+    sprite.style.transition = 'top 0.2s, left 0.2s';
 
-    checkCollision();
-});
+    document.addEventListener('keydown', (event) => {
+        switch(event.key) {
+            case 'ArrowUp':
+                moveSprite(0, -stepSize);
+                break;
+            case 'ArrowDown':
+                moveSprite(0, stepSize);
+                break;
+            case 'ArrowLeft':
+                moveSprite(-stepSize, 0);
+                break;
+            case 'ArrowRight':
+                moveSprite(stepSize, 0);
+                break;
+        }
+    });
 
-function checkCollision() {
-    const rooms = document.getElementsByClassName('room');
-    for (let i = 0; i < rooms.length; i++) {
-        const room = rooms[i].getBoundingClientRect();
-        const spriteRect = sprite.getBoundingClientRect();
+    function moveSprite(deltaX, deltaY) {
+        const newX = spritePosition.x + deltaX;
+        const newY = spritePosition.y + deltaY;
 
-        if (spriteRect.left < room.right &&
-            spriteRect.right > room.left &&
-            spriteRect.top < room.bottom &&
-            spriteRect.bottom > room.top) {
-            window.location.href = rooms[i].id + '.html';
+        const ladderLeft = ladder.offsetLeft / window.innerWidth * 100;
+        const ladderRight = ladderLeft + ladder.clientWidth / window.innerWidth * 100;
+        const spriteCenterX = sprite.offsetLeft / window.innerWidth * 100 + (sprite.clientWidth / window.innerWidth * 100 / 2);
+
+        if (newX >= 0 && newX <= 100 - (sprite.clientWidth / window.innerWidth * 100)) {
+            spritePosition.x = newX;
+            sprite.style.left = `${spritePosition.x}vw`;
+        }
+        if (spriteCenterX >= ladderLeft && spriteCenterX <= ladderRight) {
+            if (newY >= 0 && newY <= 100 - (sprite.clientHeight / window.innerHeight * 100)) {
+                spritePosition.y = newY;
+                sprite.style.top = `${spritePosition.y}vh`;
+            }
         }
     }
-}
+});
