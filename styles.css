@@ -29,7 +29,11 @@ body {
     height: 100%;
     width: 2.7vw; 
     min-width: 25px; 
-    background: brown;
+    background: transparent;
+    border-left: 2px solid brown;
+    border-right: 2px solid brown;
+    background-image: repeating-linear-gradient(0deg, transparent, transparent 95%, brown 95%, brown 100%);
+    background-size: 100% 25px;
 }
 
 .room {
