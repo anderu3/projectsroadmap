@@ -1,6 +1,6 @@
 body {
     overflow: hidden;
-    background-image: url('/images/bookshelf.png'); 
+    background-image: url('images/bookshelf.png'); 
     background-size: contain; 
     background-repeat: no-repeat;
     background-position: center center; 
