@@ -1,10 +1,10 @@
 body {
     overflow: hidden;
-    background-image: url('/images/libraryshelf.jpg'); 
-    background-size: cover; 
+    background-image: url('/images/bookshelf.png'); 
+    background-size: contain; 
     background-repeat: no-repeat;
     background-position: center center; 
-    background-color: white; 
+    background-color: #0f0f17; 
 }
 
 #gameMap {
@@ -15,37 +15,88 @@ body {
 
 #sprite {
     position: absolute;
+    background-image: url('/images/projects/small-mario.gif'); 
+    background-size: contain; 
+    background-repeat: no-repeat;
     height: 5vh; 
     width: 5vh; 
     min-height: 50px; 
     min-width: 50px; 
-    background: red;
 }
 
 .ladder {
     position: absolute;
-    left: 15%;
-    top: 0;
-    height: 100%;
-    width: 2.7vw; 
+    left: 35.3%;
+    bottom: 0;
+    height: 60%;
+    width: 6vw; 
     min-width: 25px; 
-    background: transparent;
+    /* background: transparent;
     border-left: 2px solid brown;
     border-right: 2px solid brown;
     background-image: repeating-linear-gradient(0deg, transparent, transparent 95%, brown 95%, brown 100%);
-    background-size: 100% 25px;
+    background-size: 100% 25px; */
 }
 
 .room {
     position: absolute;
-    height: 10vh; 
-    width: 10vh; 
-    border: 4px solid orange;
+    height: 5vh; 
+    width: 5vh; 
+    /* border: 4px solid orange; */
 }
 
-#room1 { top: 10%; left: 20%; }
-#room2 { top: 40%; left: 20%; }
+#room1 { 
+    top: 56%; 
+    left: 51%;
+    background-image: url('/images/book.png');
+    background-size: cover; 
+    background-repeat: no-repeat;  
+}
+/* #room2 { top: 40%; left: 20%; }
 #room3 { top: 70%; left: 20%; }
 #room4 { top: 10%; left: 80%; }
 #room5 { top: 40%; left: 80%; }
-#stairs { top: 70%; left: 80%; }
+#stairs { top: 70%; left: 80%; } */
+
+
+.shelf {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+}
+
+#shelf0 {
+    top: 45.3vh;
+    /* background-color: red; */
+}
+
+#shelf1 {
+    top: 52.5vh;
+    /* background-color: orange; */
+}
+
+#shelf2 {
+    top: 61vh;
+    /* background-color: green; */
+}
+
+#shelf3 {
+    top: 68.2vh;
+    /* background-color: yellow; */
+}
+
+#shelf4 {
+    top: 75vh;
+    /* background-color: pink; */
+}
+
+#shelf5 {
+    top: 82.5vh;
+    /* background-color: cyan; */
+}
+
+#shelf6 {
+    top: 89vh;
+    /* background-color: blue; */
+}
