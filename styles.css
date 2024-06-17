@@ -1,6 +1,6 @@
 body {
     overflow: hidden;
-    background-image: url('/images/bookshelf.png'); 
+    background-image: url('images/bookshelf.png'); 
     background-size: contain; 
     background-repeat: no-repeat;
     background-position: center center; 
@@ -15,7 +15,7 @@ body {
 
 #sprite {
     position: absolute;
-    background-image: url('/images/projects/small-mario.gif'); 
+    background-image: url('images/projects/small-mario.gif'); 
     background-size: contain; 
     background-repeat: no-repeat;
     height: 5vh; 
@@ -48,7 +48,7 @@ body {
 #room1 { 
     top: 56%; 
     left: 51%;
-    background-image: url('/images/book.png');
+    background-image: url('images/book.png');
     background-size: cover; 
     background-repeat: no-repeat;  
 }
