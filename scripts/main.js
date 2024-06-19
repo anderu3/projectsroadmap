@@ -13,6 +13,37 @@ document.addEventListener('DOMContentLoaded', () => {
 
     sprite.style.transition = 'top 0.2s, left 0.2s';
 
+    const projects = [
+        { id: 'project1', url: 'https://github.com/anderu3/pomodorotimer', alreadyopened: false },
+        { id: 'project2', url: 'https://github.com/anderu3/crossing-game', alreadyopened: false  },
+        { id: 'project3', url: 'https://github.com/anderu3', alreadyopened: false  },
+        { id: 'project4', url: 'https://github.com/anderu3', alreadyopened: false  },
+        { id: 'project5', url: 'https://github.com/anderu3', alreadyopened: false  },
+    ];
+
+    function checkCollision() {
+        const spriteRect = sprite.getBoundingClientRect();
+
+        for (const project of projects) {
+            if (!project.alreadyopened) {
+                const projectElement = document.getElementById(project.id);
+                if (projectElement) {
+                    const projectRect = projectElement.getBoundingClientRect();
+
+                    if (spriteRect.x < projectRect.x + projectRect.width &&
+                        spriteRect.x + spriteRect.width > projectRect.x &&
+                        spriteRect.y < projectRect.y + projectRect.height &&
+                        spriteRect.y + spriteRect.height > projectRect.y) {
+                            
+                        window.open(project.url, '_blank');
+                        project.alreadyopened = true;
+                    }
+                }
+            }
+        }
+    }
+    
+    setInterval(checkCollision, 100);
 
     function fallToNearestShelf() {
         if (!isSpriteWithinLadder() && spritePosition.y < 88) {

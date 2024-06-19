@@ -38,26 +38,32 @@ body {
     background-size: 100% 25px; */
 }
 
-.room {
+.project {
     position: absolute;
     height: 5vh; 
     width: 5vh; 
     /* border: 4px solid orange; */
 }
 
-#room1 { 
+#project1 { 
     top: 56%; 
     left: 51%;
-    background-image: url('images/book.png');
-    background-size: cover; 
+    background-image: url('images/pomodorostand.png');
+    background-size: contain; 
     background-repeat: no-repeat;  
 }
-/* #room2 { top: 40%; left: 20%; }
-#room3 { top: 70%; left: 20%; }
-#room4 { top: 10%; left: 80%; }
-#room5 { top: 40%; left: 80%; }
-#stairs { top: 70%; left: 80%; } */
+#project2 { 
+    top: 63.5%; 
+    left: 55.8%; 
+    background-image: url('images/turtle.png');
+    background-size: contain; 
+    background-repeat: no-repeat;  
+}
 
+/* #project3 { top: 70%; left: 20%; }
+#project4 { top: 10%; left: 80%; }
+#project5 { top: 40%; left: 80%; }
+#stairs { top: 70%; left: 80%; } */ */
 
 .shelf {
     position: absolute;
