@@ -45,9 +45,21 @@ document.addEventListener('DOMContentLoaded', () => {
     
     setInterval(checkCollision, 100);
 
+
+    let shelves;
+        if (window.innerWidth >= 1536 && window.innerWidth <= 1920 && window.innerHeight >= 715 && window.innerHeight <= 1080) {
+            shelves = [87.5, 80.8, 73.3, 66.3, 59.3, 51, 43.3];
+        } else {
+            shelves = [89, 82.5, 75, 68, 61, 52.5, 45.3];
+        }
+    // desktop size was: const shelves = [89, 82.5, 75, 68, 61, 52.5, 45.3];
+    // const shelves = [87.5, 80.8, 73.3, 66.3, 59.3, 51, 43.3];
+
+    const topOfLadder = 39
+
     function fallToNearestShelf() {
         if (!isSpriteWithinLadder() && spritePosition.y < 88) {
-            const shelves = [89, 82.5, 75, 68, 61, 52.5, 45.3];
+            // const shelves = [89, 82.5, 75, 68, 61, 52.5, 45.3];
             let nearestShelf = shelves[0];
     
             for (let i = 0; i < shelves.length; i++) {
@@ -67,11 +79,11 @@ document.addEventListener('DOMContentLoaded', () => {
     
 
     document.addEventListener('keydown', (event) => {
-        const shelves = [89, 82.5, 75, 68, 61, 52.5, 45.3];
+        
 
         switch(event.key) {
             case 'ArrowUp':
-                if ((isSpriteWithinLadder() || spritePosition.y >= 91) && spritePosition.y > 40.3)  {
+                if ((isSpriteWithinLadder() || spritePosition.y >= 91) && spritePosition.y > topOfLadder)  {
                     moveSprite(0, -stepSize);
                 }
                 break;

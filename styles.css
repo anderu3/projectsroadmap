@@ -31,11 +31,11 @@ body {
     height: 60%;
     width: 6vw; 
     min-width: 25px; 
-    /* background: transparent;
+    background: transparent;
     border-left: 2px solid brown;
     border-right: 2px solid brown;
     background-image: repeating-linear-gradient(0deg, transparent, transparent 95%, brown 95%, brown 100%);
-    background-size: 100% 25px; */
+    background-size: 100% 25px;
 }
 
 .project {
@@ -63,46 +63,47 @@ body {
 /* #project3 { top: 70%; left: 20%; }
 #project4 { top: 10%; left: 80%; }
 #project5 { top: 40%; left: 80%; }
-#stairs { top: 70%; left: 80%; } */ */
+#stairs { top: 70%; left: 80%; } */ 
 
 .shelf {
     position: absolute;
     left: 0;
     right: 0;
     height: 1px;
+    background-color: red;
 }
 
 #shelf0 {
     top: 45.3vh;
-    /* background-color: red; */
+    background-color: red;
 }
 
 #shelf1 {
     top: 52.5vh;
-    /* background-color: orange; */
+    background-color: orange;
 }
 
 #shelf2 {
     top: 61vh;
-    /* background-color: green; */
+    background-color: green;
 }
 
 #shelf3 {
     top: 68.2vh;
-    /* background-color: yellow; */
+    background-color: yellow;
 }
 
 #shelf4 {
     top: 75vh;
-    /* background-color: pink; */
+    background-color: pink;
 }
 
 #shelf5 {
     top: 82.5vh;
-    /* background-color: cyan; */
+    background-color: cyan;
 }
 
 #shelf6 {
     top: 89vh;
-    /* background-color: blue; */
+    background-color: blue;
 }
