@@ -47,8 +47,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     let shelves;
-        if (window.innerWidth >= 1536 && window.innerWidth <= 1920 && window.innerHeight >= 715 && window.innerHeight <= 1080) {
+        // this was for laptop size, between 1536-1919 x 715-1080
+        if (window.innerWidth >= 1536 && window.innerWidth <= 1919 && window.innerHeight >= 781 && window.innerHeight <= 1080) {
             shelves = [87.5, 80.8, 73.3, 66.3, 59.3, 51, 43.3];
+            
+            // laptop size, between 1320-1535 x 600-714     
+        } else if (window.innerWidth >= 1320 && window.innerWidth <= 1535 && window.innerHeight >= 600 && window.innerHeight <= 780) {
+            shelves = [86.5, 80.8, 73.3, 66.3, 59.3, 51, 44.3]
         } else {
             shelves = [89, 82.5, 75, 68, 61, 52.5, 45.3];
         }

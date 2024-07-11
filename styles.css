@@ -15,7 +15,7 @@ body {
 
 #sprite {
     position: absolute;
-    background-image: url('images/projects/small-mario.gif'); 
+    background-image: url('images/projects/small-andrew.png'); 
     background-size: contain; 
     background-repeat: no-repeat;
     height: 5vh; 
@@ -32,10 +32,10 @@ body {
     width: 6vw; 
     min-width: 25px; 
     background: transparent;
-    border-left: 2px solid brown;
+    /* border-left: 2px solid brown;
     border-right: 2px solid brown;
     background-image: repeating-linear-gradient(0deg, transparent, transparent 95%, brown 95%, brown 100%);
-    background-size: 100% 25px;
+    background-size: 100% 25px; */
 }
 
 .project {
@@ -54,11 +54,60 @@ body {
 }
 #project2 { 
     top: 63.5%; 
-    left: 55.8%; 
+    left: 56%; 
     background-image: url('images/turtle.png');
     background-size: contain; 
     background-repeat: no-repeat;  
 }
+
+/* Media query for viewport between width 1660 and 1900 */
+@media (min-width: 1901px) {
+    #project1 {
+        top: 56%; 
+        left: 51%;
+    }
+    #project2 {
+        top: 63.5%; 
+        left: 56%; 
+    }
+}
+
+/* Media query for viewport between width 1660 and 1900 */
+@media (min-width: 1661px) and (max-width: 1900) {
+    #project1 {
+        top: 55.5%;
+        left: 50.8%;
+    }
+    #project2 {
+        top: 62.5%;
+        left: 56.3%;
+    }
+}
+
+/* Media query for viewport width between 1440px and 1664px */
+@media (min-width: 1441px) and (max-width: 1660px) {
+    #project1 {
+        top: 53.5%;
+        left: 50.8%;
+    }
+    #project2 {
+        top: 62%;
+        left: 57.3%;
+    }
+}
+
+/* Media query for viewport width 1440px or smaller */
+@media (max-width: 1440px) {
+    #project1 {
+        top: 55.5%;
+        left: 50.8%;
+    }
+    #project2 {
+        top: 63%;
+        left: 56.3%;
+    }
+}
+
 
 /* #project3 { top: 70%; left: 20%; }
 #project4 { top: 10%; left: 80%; }
@@ -69,8 +118,8 @@ body {
     position: absolute;
     left: 0;
     right: 0;
-    height: 1px;
-    background-color: red;
+    /* height: 1px;
+    background-color: red; */
 }
 
 #shelf0 {
