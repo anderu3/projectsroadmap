@@ -53,10 +53,14 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // laptop size, between 1320-1535 x 600-714     
         } else if (window.innerWidth >= 1320 && window.innerWidth <= 1535 && window.innerHeight >= 600 && window.innerHeight <= 780) {
-            shelves = [86.5, 80.8, 73.3, 66.3, 59.3, 51, 44.3]
+            shelves = [86.5, 80.8, 73.3, 66.3, 59.3, 51, 44.3];
+            
+        } else if (window.innerWidth == 1536 && window.innerHeight == 715) {
+            shelves = [87.5, 80.8, 73.3, 66.3, 59.3, 51, 43.3];
+
         } else {
             shelves = [89, 82.5, 75, 68, 61, 52.5, 45.3];
-        }
+        } console.log(window.innerWidth, window.innerHeight, shelves)
     // desktop size was: const shelves = [89, 82.5, 75, 68, 61, 52.5, 45.3];
     // const shelves = [87.5, 80.8, 73.3, 66.3, 59.3, 51, 43.3];
 
