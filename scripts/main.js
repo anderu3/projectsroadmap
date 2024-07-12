@@ -48,25 +48,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Add logging for window size
     // Higher number is LOWER to the ground
+    // Lower number is HIGHER from the ground
     let shelves;
         console.log(`Window Width: ${window.innerWidth}`);
 
     if (window.innerWidth > 1720 && window.innerWidth <= 1919) {
         shelves = [87.5, 80.8, 73.3, 66.3, 59.3, 51, 43.3];
+        console.log('First if');
+
+    } else if (window.innerWidth == 1710 && window.innerHeight < 1000) {
+        shelves = [86, 79.8, 73.3, 66.8, 60, 52.6, 45.6];
+        console.log('Macbook edge case');
 
     } else if (window.innerWidth > 1536 && window.innerWidth <= 1720) {
         shelves = [87, 80.8, 73.5, 67.3, 60.3, 52.6, 45];
+        console.log('Second elif');
 
     } else if (window.innerWidth >= 1320 && window.innerWidth <= 1535) {
         shelves = [87, 80.8, 73.3, 66.3, 59.3, 51, 44.3];
+        console.log('Third elif');
 
     } else if (window.innerWidth == 1536 && window.innerHeight == 715) {
         shelves = [88, 80.8, 73.3, 66.3, 59.3, 51, 43.3];
+        console.log('Fourth elif');
 
     } else {
         shelves = [89, 82.5, 75, 68, 61, 52.4, 45];
+        console.log('Else case');
 }
-
     console.log('Shelves:', shelves);
     const topOfLadder = 39
         
