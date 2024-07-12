@@ -46,26 +46,30 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(checkCollision, 100);
 
 
+    // Add logging for window size
+    // Higher number is LOWER to the ground
     let shelves;
-        // this was for laptop size, between 1536-1919 x 715-1080
-        if (window.innerWidth > 1536 && window.innerWidth <= 1919 && window.innerHeight >= 781 && window.innerHeight <= 1080) {
-            shelves = [87.5, 80.8, 73.3, 66.3, 59.3, 51, 43.3];
-            
-            // laptop size, between 1320-1535 x 600-714     
-        } else if (window.innerWidth >= 1320 && window.innerWidth <= 1535 && window.innerHeight >= 600 && window.innerHeight <= 780) {
-            shelves = [87, 80.8, 73.3, 66.3, 59.3, 51, 44.3];
-            
-        } else if (window.innerWidth == 1536 && window.innerHeight == 715) {
-            shelves = [88, 80.8, 73.3, 66.3, 59.3, 51, 43.3];
+        console.log(`Window Width: ${window.innerWidth}`);
 
-        } else {
-            shelves = [89, 82.5, 75, 68, 61, 52.5, 45.3];
-        } 
-    // desktop size was: const shelves = [89, 82.5, 75, 68, 61, 52.5, 45.3];
-    // const shelves = [87.5, 80.8, 73.3, 66.3, 59.3, 51, 43.3];
+    if (window.innerWidth > 1720 && window.innerWidth <= 1919) {
+        shelves = [87.5, 80.8, 73.3, 66.3, 59.3, 51, 43.3];
 
+    } else if (window.innerWidth > 1536 && window.innerWidth <= 1720) {
+        shelves = [87, 80.8, 73.5, 67.3, 60.3, 52.6, 45];
+
+    } else if (window.innerWidth >= 1320 && window.innerWidth <= 1535) {
+        shelves = [87, 80.8, 73.3, 66.3, 59.3, 51, 44.3];
+
+    } else if (window.innerWidth == 1536 && window.innerHeight == 715) {
+        shelves = [88, 80.8, 73.3, 66.3, 59.3, 51, 43.3];
+
+    } else {
+        shelves = [89, 82.5, 75, 68, 61, 52.4, 45];
+}
+
+    console.log('Shelves:', shelves);
     const topOfLadder = 39
-
+        
     function fallToNearestShelf() {
         if (!isSpriteWithinLadder() && spritePosition.y < 88) {
             // const shelves = [89, 82.5, 75, 68, 61, 52.5, 45.3];
